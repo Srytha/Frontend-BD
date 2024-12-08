@@ -1,0 +1,152 @@
+/* ClassDetail.css */
+
+/* Contenedor principal */
+.class-detail-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #ecf0f1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Contenedor de la clase y detalles */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineamos todo hacia la izquierda */
+    padding: 20px;
+  }
+  
+  /* Estilo de la información de la clase */
+  .class-info {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .class-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .class-info p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Línea horizontal entre secciones */
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin: 20px 0;
+  }
+  
+  /* Sección para el botón de tomar asistencia y el QR */
+  .attendance-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineamos todo hacia la izquierda */
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .attendance-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .attendance-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .attendance-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Estilo para el QR generado */
+  .qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineamos todo hacia la izquierda */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .qr-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Botón de volver al dashboard */
+  .back-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .back-button:active {
+    transform: translateY(1px);
+  }
+  
