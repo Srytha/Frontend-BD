@@ -1,0 +1,50 @@
+/* Reportes.css */
+.reportes-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #0056b3;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #f0f0f1; /* Color azul para los elementos */
+    font-weight: bold;
+  }
+  
+  .sidebar li:hover {
+    color: #0056b3; /* Cambia a un azul más oscuro cuando se pasa el ratón */
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .main-content h2 {
+    margin-top: 0;
+  }
+  
+  .main-content .btn-home {
+    background-color: #eaedf2;
+    color:  #e7ecf0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .main-content .btn-home:hover {
+    background-color: #0056b3;
+  }
+  

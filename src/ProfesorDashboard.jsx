@@ -1,12 +1,13 @@
+// ProfesorDashboard.jsx
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Para navegar
+import { useNavigate } from "react-router-dom"; // Hook de navegación
 import "./ProfesorDashboard.css";
 
 function ProfesorDashboard() {
   const [classes, setClasses] = useState([]);
   const [showAddClassForm, setShowAddClassForm] = useState(false);
   const [newClass, setNewClass] = useState({ name: "", group: "", code: "" });
-  const navigate = useNavigate(); // Hook de navegación
+  const navigate = useNavigate(); // Hook para redirigir
 
   useEffect(() => {
     // Cargar clases desde localStorage
@@ -45,24 +46,28 @@ function ProfesorDashboard() {
     navigate(`/class-detail/${clase.id}`);
   };
 
+  const handleLogout = () => {
+    navigate("/"); // Redirige al usuario a la pantalla de Login
+  };
+
   return (
     <div className="profesor-dashboard">
       <div className="sidebar">
         <ul>
-          <li>Home</li>
-          <li>Configuración</li>
-          <li>Reportes</li>
-          <li>Cerrar sesión</li>
+          <li onClick={() => navigate("/profesor-dashboard")}>Home</li>
+          <li onClick={() => navigate("/configuracion")}>Configuración</li>
+          <li onClick={() => navigate("/reportes")}>Reportes</li> {/* Aquí se redirige a la sección de reportes */}
+          <li onClick={handleLogout}>Cerrar sesión</li>
         </ul>
       </div>
       <div className="main-content">
-        <h1>Hola, ¿Qué deseas hacer?</h1>
+        <h1>Bienvenido</h1>
         <div className="tarjetas-clases">
           {classes.map((clase) => (
             <div
               key={clase.id}
               className="tarjeta-clase"
-              onClick={() => handleClassClick(clase)}
+              onClick={() => handleClassClick(clase)} // Lógica para redirigir
             >
               <h2>{clase.name}</h2>
               <p>{clase.group}</p>
@@ -79,6 +84,7 @@ function ProfesorDashboard() {
         </div>
       </div>
 
+      {/* Modal para agregar clase */}
       {showAddClassForm && (
         <div className="modal">
           <h2>Añadir Clase</h2>
